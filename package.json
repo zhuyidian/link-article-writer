@@ -1,0 +1,36 @@
+{
+  "name": "link-article-writer",
+  "version": "1.0.0",
+  "description": "Claude Code Skill - 自动解析链接并生成完整文章。支持YouTube视频、知乎文章、微信公众号文章",
+  "homepage": "https://github.com/zhuyidian/link-article-writer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuyidian/link-article-writer.git"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "article-writer",
+    "youtube",
+    "zhihu",
+    "wechat"
+  ],
+  "bin": {
+    "link-article-writer": "./bin/install.js"
+  },
+  "scripts": {
+    "postinstall": "node bin/install.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "SKILL.md",
+    "scripts/",
+    "tools/",
+    "references/",
+    "bin/"
+  ],
+  "author": "zhuyidian",
+  "license": "MIT"
+}
