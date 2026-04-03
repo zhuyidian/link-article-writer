@@ -28,6 +28,34 @@ link-article-writer 是一个 Claude Code Skill，能够自动解析链接并生
 用户输入链接 → URL解析路由 → 内容提取 → 深度研究 → 大纲确认 → 文章写作 → 排版优化 → 配图生成 → 最终输出
 ```
 
+## 安装方式
+
+### 方式一：npx 一次性安装（推荐）
+
+```bash
+npx link-article-writer
+```
+
+### 方式二：npm 全局安装
+
+```bash
+npm install -g link-article-writer
+```
+
+### 方式三：从 GitHub 直接安装
+
+```bash
+npx github:zhuyidian/link-article-writer
+```
+
+### 安装后验证
+
+安装完成后，技能会被部署到以下位置：
+- 技能代码：`~/.agents/skills/link-article-writer/`
+- 符号链接：`~/.claude/skills/link-article-writer`
+
+---
+
 ## 快速开始
 
 ### 1. 配置 API Key
@@ -56,6 +84,16 @@ MINIMAX_API_KEY=your_minimax_api_key_here
 ---
 
 ## 版本迭代
+
+### V1.1.0 (2026-04-03)
+
+**新增 npm 安装支持**
+
+- 添加 `package.json`，支持 `npx` / `npm` 全局安装
+- 添加 `bin/install.js` 安装脚本，自动创建符号链接到 `~/.claude/skills/`
+- 支持 `npx link-article-writer` 一键安装
+- 支持 `npm install -g link-article-writer` 全局安装
+- 支持 `npx github:zhuyidian/link-article-writer` 从 GitHub 直接安装
 
 ### V1.0.0 (2026-03-23)
 
@@ -96,6 +134,9 @@ MINIMAX_API_KEY=your_minimax_api_key_here
 link-article-writer/
 ├── SKILL.md                          # Skill 定义文件
 ├── README.md                          # 项目说明文档
+├── package.json                       # npm 包配置（支持 npx 安装）
+├── bin/
+│   └── install.js                     # 安装脚本
 ├── config.env                         # 配置文件
 ├── scripts/
 │   ├── url_parser.py                  # URL 解析与平台路由
